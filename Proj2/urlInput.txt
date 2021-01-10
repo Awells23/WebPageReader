@@ -1,0 +1,728 @@
+ Recursion in Java - Javatpoint
+
+
+
+
+
+
+(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);
+(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/37780/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);
+ 
+ 
+ 
+&#8679;
+ 
+    
+        
+            
+                
+            
+            
+
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+
+                
+            
+            
+        
+    
+        
+        
+             
+                
+            
+        
+    -->
+
+ 
+
+
+
+
+
+
+
+
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+
+ -->
+
+
+
+ 
+
+Home
+Java
+C
+C++
+C#
+Servlet
+JSP
+EJB
+Struts2
+Mail
+Hibernate
+Spring
+Android
+Design P
+Quiz
+Projects
+Interview Q
+Comment
+Forum
+Training
+
+
+
+
+
+ 
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+Java Training 
+
+Basics of Java 
+
+
+Java Object Class
+
+
+
+Java OOPs Concepts
+Naming Convention
+Object and Class
+Constructor
+static keyword 
+this keyword
+
+
+
+Java Inheritance
+
+
+
+Inheritance(IS-A)
+Aggregation(HAS-A)
+
+
+
+Java Polymorphism
+
+
+
+Method Overloading
+Method Overriding
+Covariant Return Type
+super keyword
+Instance Initializer block
+final keyword
+Runtime Polymorphism
+Dynamic Binding
+instanceof operator
+
+
+
+Java Abstraction
+
+
+
+Abstract class
+Interface
+Abstract vs Interface
+
+
+
+Java Encapsulation
+
+
+
+Package
+Access Modifiers
+Encapsulation
+
+
+
+Java Array
+
+
+
+Java Array
+
+
+
+Java OOPs Misc
+
+
+
+Object class 
+Object Cloning
+Math class 
+Wrapper Class
+Java Recursion
+Call By Value 
+strictfp keyword
+javadoc tool
+Command Line Arg
+Object vs Class
+Overloading vs Overriding
+
+
+Java String
+Java Regex
+Exception Handling
+Java Inner classes
+Java Multithreading
+Java I/O
+Java Networking
+Java AWT &amp; Events
+Java Swing
+JavaFX
+Java Applet
+Java Reflection
+Java Date
+Java Conversion
+Java Collection
+Java JDBC
+Java New Features
+RMI
+Internationalization
+Interview Questions
+
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+
+
+
+next &rarr;
+&rarr; prev
+
+
+Recursion in Java
+Recursion in java is a process in which a method calls itself continuously. A method in java that calls itself is called recursive method.
+It makes the code compact but complex to understand.
+
+Syntax:
+
+returntype methodname(){
+//code to be executed
+methodname();//calling same method
+}
+
+
+Java Recursion Example 1: Infinite times
+
+public class RecursionExample1 {
+static void p(){
+System.out.println("hello");
+p();
+}
+
+public static void main(String[] args) {
+p();
+}
+}
+
+Output:
+
+hello
+hello
+...
+java.lang.StackOverflowError
+
+
+
+<ins class="adsbygoogle cm_jtp_wtc_responsive"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4699858549023382"
+     data-ad-slot="6746133113">
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+Java Recursion Example 2: Finite times
+
+public class RecursionExample2 {
+static int count=0;
+static void p(){
+count++;
+if(count<=5){
+System.out.println("hello "+count);
+p();
+}
+}
+public static void main(String[] args) {
+p();
+}
+}
+
+Output:
+
+hello 1
+hello 2
+hello 3
+hello 4
+hello 5
+
+
+Java Recursion Example 3: Factorial Number
+
+public class RecursionExample3 {
+	static int factorial(int n){    
+		  if (n == 1)    
+		    return 1;    
+		  else    
+		    return(n * factorial(n-1));    
+	}    
+
+public static void main(String[] args) {
+System.out.println("Factorial of 5 is: "+factorial(5));
+}
+}
+
+Output:
+
+Factorial of 5 is: 120
+
+
+Working of above program:
+
+factorial(5) 
+   factorial(4) 
+      factorial(3) 
+         factorial(2) 
+            factorial(1) 
+               return 1 
+            return 2*1 = 2 
+         return 3*2 = 6 
+      return 4*6 = 24 
+   return 5*24 = 120
+
+Java Recursion Example 4: Fibonacci Series
+
+public class RecursionExample4 {
+	static int n1=0,n2=1,n3=0;    
+	 static void printFibo(int count){    
+	    if(count>0){    
+	         n3 = n1 + n2;    
+	         n1 = n2;    
+	         n2 = n3;    
+	         System.out.print(" "+n3);   
+	         printFibo(count-1);    
+	     }    
+	 }      
+
+public static void main(String[] args) {
+	int count=15;    
+	  System.out.print(n1+" "+n2);//printing 0 and 1    
+	  printFibo(count-2);//n-2 because 2 numbers are already printed   
+}
+}
+
+Output:
+
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+
+
+Next TopicCall by Value and Call by Reference in Java
+
+
+
+
+
+&larr; prev
+next &rarr;
+
+
+
+
+
+
+
+
+Help Others, Please Share
+
+
+-->
+
+-->
+
+
+
+
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4699858549023382"
+     data-ad-slot="5022809933"
+     data-ad-format="auto"
+     data-full-width-responsive="true">
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+ 
+Learn Latest Tutorials
+
+
+                          
+                            
+                                Openpyxl 
+                                
+                         
+                          
+                            
+                                Tally 
+                                
+                         
+                          
+                            
+                                Godot 
+                                
+                         
+                           
+                            
+                                Spring Boot  
+                                
+                         
+                          
+                            
+                                Gradle 
+                                
+                         
+                           
+                            
+                                UML 
+                                
+                         
+                          
+                            
+                                ANN 
+                                
+                         
+                          
+                            
+                                ES6 
+                                
+                         
+                        
+                            
+                                Flutter
+                             
+                         
+                        
+                            
+                                Selenium Py
+                             
+                         
+                        
+                            
+                                Firebase
+                             
+                         
+                        
+                            
+                                Cobol
+                             
+                          
+
+
+  
+Preparation
+ 
+
+                        
+                            
+                                Aptitude
+                            
+                        
+                        
+                            
+                                Reasoning
+                            
+                        
+                        
+                            
+                                Verbal A.
+                            
+                        
+                        
+                            
+                                Interview
+                            
+                        
+                        
+                            
+                                Company
+                             
+                         
+
+
+
+  
+Trending Technologies
+
+
+                        
+                            
+                                AI
+                             
+                         
+                        
+                            
+                                AWS
+                            
+                        
+                        
+                            
+                                Selenium
+                            
+                        
+                        
+                            
+                                Cloud
+                            
+                        
+                        
+                            
+                                Hadoop
+                            
+                        
+                        
+                            
+                                ReactJS
+                             
+                          
+                        
+                            
+                                D. Science
+                             
+                          
+                        
+                            
+                                Angular 7
+                             
+                          
+                        
+                            
+                                Blockchain
+                              
+                         
+                        
+                            
+                                Git
+                             
+                         
+                          
+                            
+                                ML 
+                                
+                         
+                          
+                            
+                                DevOps 
+                                
+                         
+
+
+ 
+
+
+                    B.Tech / MCA
+                    
+                        
+                            
+                                DBMS
+                            
+                        
+                        
+                            
+                                DS
+                            
+                         
+                        
+                            
+                                DAA
+                            
+                        
+                        
+                            
+                                OS
+                            
+                        
+                        
+                            
+                                C. Network
+                            
+                        
+                        
+                            
+                                Compiler D.
+                            
+                        
+                        
+                            
+                                COA
+                            
+                        
+                        
+                            
+                                D. Math.
+                            
+                        
+                        
+                            
+                                E. Hacking
+                            
+                        
+                        
+                            
+                                C. Graphics
+                             
+                        
+                        
+                            
+                                Software E.
+                             
+                         
+
+                        
+                            
+                                Web Tech.
+                            
+                        
+                        
+                            
+                                Cyber Sec.
+                            
+                        
+                        
+                            
+                                Automata
+                             
+                        
+                        
+                        
+                            
+                                C
+                            
+                        
+                        
+                            
+                                C++
+                            
+                        
+                        
+                            
+                                Java
+                            
+                        
+                        
+                            
+                                .Net
+                            
+                        
+                        
+                            
+                                Python
+                            
+                        
+
+                        
+                            
+                                Programs
+                            
+                        
+                        
+                            
+                                Control S.
+                            
+                        
+                        
+                            
+                                Data Mining 
+                                
+                         
+
+
+
+ 
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+
+
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i 
+
+
+
+
+
+
+ Summer Training JavaTpoint offers Summer Internship Training on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit training.javatpoint.com Course Fee: &#8377; 6000 OnlyDuration: 6 Week --> Javatpoint Services JavaTpoint offers too many high quality services. Mail us on hr@javatpoint.com, to get more information about given services.  Website DesigningWebsite DevelopmentJava DevelopmentPHP DevelopmentWordPressGraphic DesigningLogoDigital MarketingOn Page and Off Page SEOPPCContent DevelopmentCorporate TrainingClassroom and Online TrainingData Entry  Training For College Campus JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com. Duration: 1 week to 2 weekOur InitiativesHindi100Lyricsia-->var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})(); Like/Subscribe us for latest updates or newsletter        Learn TutorialsLearn JavaLearn Data StructuresLearn C ProgrammingLearn C++ TutorialLearn C# TutorialLearn PHP TutorialLearn HTML TutorialLearn JavaScript TutorialLearn jQuery TutorialLearn Spring TutorialOur WebsitesJavatpoint.comHindi100.comLyricsia.comQuoteperson.comJobandplacement.comOur ServicesWebsite DevelopmentAndroid DevelopmentWebsite DesigningDigital MarketingSummer TrainingIndustrial TrainingCollege Campus TrainingContactAddress: G-13, 2nd Floor, Sec-3Noida, UP, 201301, IndiaContact No: 0120-4256464, 9990449935Contact Us Subscribe Us Privacy PolicySitemapAbout Me&copy; Copyright 2011-2018 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.
+ 
+ 
+ dp.SyntaxHighlighter.HighlightAll('code'); 
+
+  
+
